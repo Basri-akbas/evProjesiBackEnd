@@ -100,4 +100,10 @@ public class ReviewService {
     public List<ReviewDTO> fetchAllReviews() {
     return reviewRepository.findAllReview();
     }
+ 
+    public List<ReviewDTO> findAllByUserId(Long userId) {
+    User user = userRepository.findById(userId).orElseThrow(() ->
+            new ResourceNotFoundException(String.format(USER_NOT_FOUND_MSG, userId)));
+    return reviewRepository.findAllByUserId(user);
+    }
 }
