@@ -1,5 +1,8 @@
 package com.zekademi.strongprettyhomes.dto;
 
+@Setter
+@Getter
+@NoArgsConstructor
 public class AgentImageDTO {
 
         private String name;
