@@ -114,5 +114,12 @@ public ResponseEntity<Map<String, Boolean>> updateReview(@RequestParam(value = "
         map.put("success", true);
         return new ResponseEntity<>(map, HttpStatus.OK);
     }
+    
+    @GetMapping("/all/auth")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<List<ReviewDTO>> getAllReviews() {
+    List<ReviewDTO> reviews = reviewService.fetchAllReviews();
+    return new ResponseEntity<>(reviews, HttpStatus.OK);
+    }
 
  }
