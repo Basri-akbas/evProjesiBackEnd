@@ -121,5 +121,13 @@ public ResponseEntity<Map<String, Boolean>> updateReview(@RequestParam(value = "
     List<ReviewDTO> reviews = reviewService.fetchAllReviews();
     return new ResponseEntity<>(reviews, HttpStatus.OK);
     }
-
+    
+    @GetMapping("/auth/all")
+    @PreAuthorize("hasRole('CUSTOMER') or hasRole('ADMIN')")
+    public ResponseEntity<List<ReviewDTO>> getUserReviewsByUserId(HttpServletRequest request) {
+    Long userId = (Long) request.getAttribute("id");
+    List<ReviewDTO> reviews = reviewService.findAllByUserId(userId);
+    return new ResponseEntity<>(reviews, HttpStatus.OK);
+    }
+    
  }
