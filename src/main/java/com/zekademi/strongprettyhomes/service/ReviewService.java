@@ -97,4 +97,7 @@ public class ReviewService {
         review.setUser(user);
         reviewRepository.save(review);
     }
+    public List<ReviewDTO> fetchAllReviews() {
+    return reviewRepository.findAllReview();
+    }
 }
