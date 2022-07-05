@@ -25,6 +25,9 @@ public interface ReviewRepository extends JpaRepository<Review,Long> {
     
     void deleteReviewByIdAndUser(Long id,User userId);
     
-     @Query("SELECT new com.zekademi.strongprettyhomes.dto.ReviewDTO(c) FROM Review c WHERE c.user.id = ?1 and c.id=?2")
+    @Query("SELECT new com.zekademi.strongprettyhomes.dto.ReviewDTO(r) FROM Review r WHERE r.user.id = ?1 and r.id=?2")
     Optional<ReviewDTO> findReviews(Long userId, Long id);
+    
+    @Query("SELECT new com.zekademi.strongprettyhomes.dto.ReviewDTO(r) FROM Review r")
+    List<ReviewDTO> findAllReview();
 }
