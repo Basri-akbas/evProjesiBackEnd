@@ -18,7 +18,9 @@ import java.util.Optional;
 public interface ReviewRepository extends JpaRepository<Review,Long> {
 
     List<ReviewDTO> findAllByPropertyId(Long property);
-
+    
+    List<ReviewDTO> findAllByUserId(User user);
+    
     Optional<ReviewDTO> findByIdAndUserId(Long id, User user);
 
     Optional<ReviewDTO> findByIdOrderById(Long id) throws ResourceNotFoundException;
