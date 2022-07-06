@@ -37,6 +37,7 @@ public class ReviewDTO {
         this.id = review.getId();
         this.review = review.getReview();
         this.score = review.getScore();
+        this.localDate=review.getActivationDate();
         this.propertyId = review.getProperty().getId();
         this.firstName = review.getUser().getFirstName();
         this.lastName = review.getUser().getLastName();
