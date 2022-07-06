@@ -21,7 +21,7 @@ public interface ReviewRepository extends JpaRepository<Review,Long> {
     
     List<ReviewDTO> findAllByUserId(Long userId);
     
-    Optional<ReviewDTO> findByIdAndUserId(Long id, User user);
+    Optional<ReviewDTO> findByIdAndUserId(Long id, Long userId);
 
     Optional<ReviewDTO> findByIdOrderById(Long id) throws ResourceNotFoundException;
     
