@@ -95,6 +95,7 @@ public class ReviewService {
 
         review.setProperty(propertyId);
         review.setUser(user);
+        review.setStatus(ReviewStatus.PENDING);
         reviewRepository.save(review);
     }
     public List<ReviewDTO> fetchAllReviews() {
