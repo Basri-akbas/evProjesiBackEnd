@@ -24,6 +24,7 @@ public class ReviewDTO {
     private Integer score;
     private Long propertyId;
     private Long userId;
+    private PropertyCategory category;
     private ReviewStatus status;
 
 
