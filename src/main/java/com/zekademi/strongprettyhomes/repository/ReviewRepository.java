@@ -19,7 +19,7 @@ public interface ReviewRepository extends JpaRepository<Review,Long> {
 
     List<ReviewDTO> findAllByPropertyId(Long property);
     
-    List<ReviewDTO> findAllByUserId(User user);
+    List<ReviewDTO> findAllByUserId(Long userId);
     
     Optional<ReviewDTO> findByIdAndUserId(Long id, User user);
 
