@@ -24,6 +24,8 @@ public class ReviewDTO {
     private Integer score;
     private Long propertyId;
     private Long userId;
+    private String firstName;
+    private String lastName;    
     private String category;
     private String type;
     private String city;
@@ -36,6 +38,8 @@ public class ReviewDTO {
         this.review = review.getReview();
         this.score = review.getScore();
         this.propertyId = review.getProperty().getId();
+        this.firstName = review.getUser().getFirstName();
+        this.lastName = review.getUser().getLastName();
         this.category = review.getProperty().getCategory().toString();
         this.type = review.getProperty().getType().toString();
         this.city = review.getProperty().getCity();
