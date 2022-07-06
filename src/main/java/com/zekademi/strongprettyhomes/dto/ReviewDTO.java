@@ -33,6 +33,7 @@ public class ReviewDTO {
         this.review = review.getReview();
         this.score = review.getScore();
         this.propertyId = review.getProperty().getId();
+        this.category = review.getProperty().getCategory();
         this.userId = review.getUser().getId();
         this.status = review.getStatus();
     }
