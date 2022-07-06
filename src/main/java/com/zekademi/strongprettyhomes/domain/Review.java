@@ -44,7 +44,7 @@ public class Review {
 
     @Enumerated(EnumType.STRING)
     @Column(length = 30, nullable = false)
-    private ReviewStatus status=ReviewStatus.PENDING;
+    private ReviewStatus status;
 
     public Review(String review, Integer score, User user, Property property, ReviewStatus status) {
         this.review = review;
