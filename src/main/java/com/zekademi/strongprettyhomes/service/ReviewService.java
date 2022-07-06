@@ -41,9 +41,9 @@ public class ReviewService {
     }
 
     public ReviewDTO findByIdAndUserId(Long id, Long userId) throws ResourceNotFoundException {
-        User user = userRepository.findById(userId).orElseThrow(() ->
-                new ResourceNotFoundException(String.format(USER_NOT_FOUND_MSG, userId)));
-        return reviewRepository.findByIdAndUserId(id, user).orElseThrow(() ->
+        /*User user = userRepository.findById(userId).orElseThrow(() ->
+                new ResourceNotFoundException(String.format(USER_NOT_FOUND_MSG, userId)));*/
+        return reviewRepository.findByIdAndUserId(id, userId).orElseThrow(() ->
                 new ResourceNotFoundException(String.format(REVIEW_NOT_FOUND_MSG, id)));
     }
 
