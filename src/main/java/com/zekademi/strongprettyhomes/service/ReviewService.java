@@ -102,8 +102,9 @@ public class ReviewService {
     }
  
     public List<ReviewDTO> findAllByUserId(Long userId) {
-    User user = userRepository.findById(userId).orElseThrow(() ->
-            new ResourceNotFoundException(String.format(USER_NOT_FOUND_MSG, userId)));
-    return reviewRepository.findAllByUserId(user);
+        /*User user = userRepository.findById(userId).orElseThrow(() ->
+                new ResourceNotFoundException(String.format(USER_NOT_FOUND_MSG, userId)));*/
+        return reviewRepository.findAllByUserId(userId);
     }
+
 }
