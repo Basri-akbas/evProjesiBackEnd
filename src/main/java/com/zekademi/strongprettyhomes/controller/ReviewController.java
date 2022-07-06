@@ -84,7 +84,7 @@ public ResponseEntity<Map<String, Boolean>> updateReview(@RequestParam(value = "
         return new ResponseEntity<>(review, HttpStatus.OK);
     }
 
-    @PatchMapping("/{id}/updateStatus")
+    @PatchMapping("/{id}/updatestatus")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Map<String, Boolean>> updateStatus(@RequestParam(value = "status") String status,
                                                              @PathVariable Long id) {
