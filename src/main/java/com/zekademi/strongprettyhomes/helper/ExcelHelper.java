@@ -128,8 +128,6 @@ public class ExcelHelper {
                 row.createCell(2).setCellValue(agent.getLastName());
                 row.createCell(3).setCellValue(agent.getPhoneNumber());
                 row.createCell(5).setCellValue(agent.getEmail());
-                //row.createCell(6).setCellValue(agent.getProperty().getId());
-                //row.createCell(7).setCellValue(agent.getProperty().getTitle());
             }
 
             workbook.write(out);
