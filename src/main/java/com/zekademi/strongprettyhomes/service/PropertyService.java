@@ -114,5 +114,10 @@ public class PropertyService {
         }
         return property.getLikeCount();
     }
-
+    public void newLikeCount(Long id, Long likeCount) {
+        Property property = propertyRepository.findById(id).orElseThrow(() ->
+                new ResourceNotFoundException("Property not found"));
+        property.setLikeCount(likeCount);
+        propertyRepository.save(property);
+    }  
 }
