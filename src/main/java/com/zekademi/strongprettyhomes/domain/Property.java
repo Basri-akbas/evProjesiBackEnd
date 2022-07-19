@@ -121,7 +121,7 @@ public class Property implements Serializable {
     private Set<PropertyDetail> propertyDetails;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "property", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "property")
     private Set<TourRequest> tourRequests;
 
     @JsonIgnore
