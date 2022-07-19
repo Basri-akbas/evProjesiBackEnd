@@ -57,7 +57,7 @@ public class ReviewService {
     reviewExist.setReview(review.getReview());
     reviewExist.setScore(review.getScore());
     reviewExist.setActivationDate(review.getActivationDate());
-
+    reviewExist.setStatus(ReviewStatus.PENDING);
     reviewRepository.save(reviewExist);
 }
       
