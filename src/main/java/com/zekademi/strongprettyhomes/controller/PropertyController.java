@@ -106,11 +106,10 @@ public class PropertyController {
         return new ResponseEntity<>(setLikes, HttpStatus.OK);
     }
     
-    @PostMapping("/{id}/count")
+    @PatchMapping("/{id}/count")
     @PreAuthorize("hasRole('CUSTOMER')")
     public ResponseEntity<Map<String, Boolean>> postNewLikeCount(@PathVariable Long id, 
-                                                                 @RequestParam("likeCount") Long likeCount
-){
+                                                                 @RequestParam("likeCount") Long likeCount){
 
         propertyService.newLikeCount(id,likeCount);
 
