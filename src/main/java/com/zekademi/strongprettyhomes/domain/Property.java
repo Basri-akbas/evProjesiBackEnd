@@ -115,7 +115,7 @@ public class Property implements Serializable {
     @JoinColumn(name = "agent_id", nullable = false)
     private Agent agent;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL )
     @JoinTable(joinColumns = @JoinColumn(name = "property_id"),
             inverseJoinColumns = @JoinColumn(name = "detail_id"))
     private Set<PropertyDetail> propertyDetails;
