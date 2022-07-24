@@ -37,4 +37,11 @@ public interface TourRequestRepository extends JpaRepository<TourRequest, Long> 
             "(cd.id = ?1 and r.status <> ?3 and r.status <> ?4 and r.status <> ?5 and r.tourRequestTime = ?2)")
     List<TourRequest> checkStatus(Long carId, LocalDateTime requestTime, TourRequestStatus rejected,
                                   TourRequestStatus done, TourRequestStatus canceled);
+    
+        
+    void deleteTourRequestByIdAndUser(Long id,User userId);
+    
+    @Query("SELECT new com.zekademi.strongprettyhomes.dto.TourRequestDTO(t) FROM TourRequest t WHERE t.user.id = ?1 and t.id=?2")
+    Optional<TourRequestDTO> findTour(Long userId, Long id);
+    
 }
