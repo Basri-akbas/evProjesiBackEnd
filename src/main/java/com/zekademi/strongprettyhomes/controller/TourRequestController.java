@@ -105,7 +105,7 @@ public class TourRequestController {
     
     @DeleteMapping("/admin/{id}/auth")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Map<String, Boolean>> deleteReservation(@PathVariable Long id, , HttpServletRequest request){
+    public ResponseEntity<Map<String, Boolean>> deleteReservation(@PathVariable Long id, HttpServletRequest request){
         tourRequestService.removeById(id);
         Map<String, Boolean> map = new HashMap<>();
         map.put("success", true);
