@@ -24,6 +24,7 @@ public class Review {
     private Long id;
 
     @Lob
+    @Column(name = "entity_value")
     private String review;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy", timezone = "Turkey")
