@@ -30,10 +30,10 @@ public class ExcelHelper {
     static String[] HEADERS_AGENT = { "Id", "firstName", "lastName", "PhoneNumber", "Email","PropertyId", "PropertyTitle" };
     static String SHEET_AGENT = "Agents";
 
-    static String[] HEADERS_REVIEW = { "Id", "Review", "ActivationDate", "Score", "Status","PropertyId", "Property_Title", "CustomerId", "CustomerFullName", };
+    static String[] HEADERS_REVIEW = { "Id", "Review", "ActivationDate", "Score", "Status","PropertyId", "Property_Title", "CustomerId", "CustomerFullName"};
     static String SHEET_REVIEW = "Reviews";
 
-    static String[] HEADERS_TOURREQUEST = { "Id", "TourRequestTime", "Adult", "Child", "Status","PropertyId", "PropertyTitle", "CustomerId"};
+    static String[] HEADERS_TOURREQUEST = { "Id", "TourRequestTime", "Adult", "Child", "Status","PropertyId", "PropertyTitle", "CustomerId",  "CustomerFullName"};
     static String SHEET_TOURREQUEST = "TourRequests";
 
 
@@ -196,7 +196,7 @@ public class ExcelHelper {
                 row.createCell(6).setCellValue(tourrequest.getPropertyId().getId());
                 row.createCell(7).setCellValue(tourrequest.getPropertyId().getTitle());
                 row.createCell(8).setCellValue(tourrequest.getUserId().getId());
-        
+                row.createCell(9).setCellValue(tourrequest.getUserId().getFullName());
             }
 
             workbook.write(out);
