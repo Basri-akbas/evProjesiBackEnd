@@ -193,10 +193,10 @@ public class ExcelHelper {
                 row.createCell(2).setCellValue(tourrequest.getAdult());
                 row.createCell(3).setCellValue(tourrequest.getChild());
                 row.createCell(5).setCellValue(tourrequest.getStatus().toString());
-                row.createCell(6).setCellValue(tourrequest.getPropertyId().getId());
-                row.createCell(7).setCellValue(tourrequest.getPropertyId().getTitle());
-                row.createCell(8).setCellValue(tourrequest.getUserId().getId());
-                row.createCell(9).setCellValue(tourrequest.getUserId().getFullName());
+                row.createCell(6).setCellValue(tourrequest.getProperty().getId());
+                row.createCell(7).setCellValue(tourrequest.getProperty().getTitle());
+                row.createCell(8).setCellValue(tourrequest.getUser().getId());
+                row.createCell(9).setCellValue(tourrequest.getUser().getFullName());
             }
 
             workbook.write(out);
