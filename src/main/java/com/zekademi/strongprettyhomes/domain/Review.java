@@ -24,7 +24,7 @@ public class Review {
     private Long id;
 
     @Lob
-    @Type(type = “org.hibernate.type.TextType”)
+    @Type(type="org.hibernate.type.TextType")
     private String review;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy", timezone = "Turkey")
