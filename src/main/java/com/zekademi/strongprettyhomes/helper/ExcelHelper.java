@@ -196,7 +196,7 @@ public class ExcelHelper {
                 row.createCell(6).setCellValue(tourrequest.getProperty().getId());
                 row.createCell(7).setCellValue(tourrequest.getProperty().getTitle());
                 row.createCell(8).setCellValue(tourrequest.getUser().getId());
-                row.createCell(9).setCellValue(tourrequest.getUser().getFullName());
+        
             }
 
             workbook.write(out);
