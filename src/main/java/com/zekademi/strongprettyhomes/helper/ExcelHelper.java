@@ -33,7 +33,7 @@ public class ExcelHelper {
     static String[] HEADERS_REVIEW = { "Id", "Review", "ActivationDate", "Score", "Status","PropertyId", "Property_Title", "CustomerId", "CustomerFullName", };
     static String SHEET_REVIEW = "Reviews";
 
-    static String[] HEADERS_TOURREQUEST = { "Id", "TourRequestTime", "Adult", "Child", "Status","PropertyId", "PropertyTitle", "CustomerId", "CustomerFullName" };
+    static String[] HEADERS_TOURREQUEST = { "Id", "TourRequestTime", "Adult", "Child", "Status","PropertyId", "PropertyTitle", "CustomerId"};
     static String SHEET_TOURREQUEST = "TourRequests";
 
 
